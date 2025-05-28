@@ -2,7 +2,7 @@
     <mat-card-content>
         <div class="d-flex">
             <div class="m-r-auto m-b-8">
-                <mat-card-title>Usuarios</mat-card-title>
+                <mat-card-title>house</mat-card-title>
                 <mat-card-subtitle>Listado</mat-card-subtitle>
             </div>
             
@@ -21,18 +21,18 @@
                 </thead>
                 <tbody>
                     <tr *ngFor="let house of houseList">
-                        <td hidden>{{ user.id }}</td>
-                        <td>{{ user.nombre }}</td>
-                        <td>{{user.email}}</td>
+                        <td hidden>{{ house.id }}</td>
+                        <td>{{ house.nombre }}</td>
+                        <td>{{house.email}}</td>
                         <td>
-                            @if(user.estado == 'Activo') {
+                            @if(house.estado == 'Activo') {
                             <span class="bg-light-success text-success rounded f-w-600 p-6 p-y-4 f-s-12">
                                 {{ user.estado }}
                             </span>
                             }
-                            @if(user.estado == 'Inactivo') {
+                            @if(house.estado == 'Inactivo') {
                             <span class="bg-light-warning text-warning rounded f-w-600 p-6 p-y-4 f-s-12">
-                                {{ user.estado }}
+                                {{ house.estado }}
                             </span>
                             }
                         </td>

@@ -1,1 +1,49 @@
-<p>character-list works!</p>
+<mat-card class="" cardWithShadow>
+    <mat-card-content>
+        <div class="d-flex">
+            <div class="m-r-auto m-b-8">
+                <mat-card-title>characters</mat-card-title>
+                <mat-card-subtitle>Listado</mat-card-subtitle>
+            </div>
+            
+        </div>
+        <hr>
+        <div class="table-responsive">
+            <table class="w-100">
+                <thead>
+                    <tr>
+                        <th hidden>id</th>
+                        <th class="f-w-t600 f-s-14">Nombre</th>
+                        <th class="f-w-t600 f-s-14">Email</th>
+                        <th class="f-w-t600 f-s-14">Estado</th>
+                        <th class="f-w-t600 f-s-14">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let character of characterList">
+                        <td hidden>{{ character.id }}</td>
+                        <td>{{ character.nombre }}</td>
+                        <td>{{character.email}}</td>
+                        <td>
+                            @if(character.estado == 'Activo') {
+                            <span class="bg-light-success text-success rounded f-w-600 p-6 p-y-4 f-s-12">
+                                {{ character.estado }}
+                            </span>
+                            }
+                            @if(character.estado == 'Inactivo') {
+                            <span class="bg-light-warning text-warning rounded f-w-600 p-6 p-y-4 f-s-12">
+                                {{ character.estado }}
+                            </span>
+                            }
+                        </td>
+                        <td>
+                           
+                            
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </mat-card-content>
+</mat-card>
